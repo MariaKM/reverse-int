@@ -1,4 +1,4 @@
-module.exports = function reverse(n) {
+function reverse(n) {
 
   i = 0;
   revNumStr = '';
@@ -6,28 +6,12 @@ module.exports = function reverse(n) {
   if (n < 0) {
     n = n * (-1);
     n = n.toString();
+  }
+  n = n.toString();
+  while (i < n.length) {
+    revNumStr += n[(n.length - 1) - i];
 
-    while (i < n.length) {
-      revNumStr += n[(n.length - 1) - i];
-
-      i++;
-    }
-
-    // revNumStr = Number(revNumStr) * (-1);
-    // revNumStr = Number(revNumStr);
-
-  } else {
-
-    n = n.toString();
-
-    while (i < n.length) {
-      revNumStr += n[(n.length - 1) - i];
-
-      i++;
-    }
-
-    // revNumStr = Number(revNumStr);
-
+    i++;
   }
 
   revNumStr = Number(revNumStr);
@@ -35,3 +19,5 @@ module.exports = function reverse(n) {
   return revNumStr;
 
 }
+
+reverse(0);
