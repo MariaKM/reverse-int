@@ -1,4 +1,4 @@
-function reverse(n) {
+module.exports = function reverse(n) {
 
   i = 0;
   revNumStr = '';
@@ -19,5 +19,3 @@ function reverse(n) {
   return revNumStr;
 
 }
-
-reverse(0);
